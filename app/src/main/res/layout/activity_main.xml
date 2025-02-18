@@ -57,7 +57,8 @@
                 android:id="@+id/upOrDown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:max="800" />
         </LinearLayout>
 
         <LinearLayout
@@ -94,7 +95,8 @@
                 android:id="@+id/seekBar2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:max="800" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
