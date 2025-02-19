@@ -2,6 +2,10 @@ package edu.up.raindrop;
 
 import android.widget.SeekBar;
 
+/**
+ * @author Carter Chan
+ */
+
 public class Controller implements SeekBar.OnSeekBarChangeListener
 {
     private CanvasWall _wall;

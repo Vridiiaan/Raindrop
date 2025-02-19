@@ -19,6 +19,10 @@ import java.util.Random;
     Solution: Copied the Lecture code
 
  */
+
+/**
+ * @author Carter Chan
+ */
 public class CanvasWall extends SurfaceView
 {
     Random rng = new Random();

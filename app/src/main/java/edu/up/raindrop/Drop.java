@@ -18,6 +18,10 @@ import java.util.Random;
     Solution: Copied the Lecture code
 
  */
+
+/**
+ * @author Carter Chan
+ */
 public class Drop
 {
     //The initial integers
