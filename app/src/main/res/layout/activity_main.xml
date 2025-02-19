@@ -18,7 +18,7 @@
             android:orientation="horizontal">
 
             <edu.up.raindrop.CanvasWall
-                android:id="@+id/surfaceView"
+                android:id="@+id/canvaswall"
                 android:layout_width="800dp"
                 android:layout_height="800dp"
                 android:layout_weight="1" />
@@ -92,7 +92,7 @@
             android:orientation="horizontal">
 
             <SeekBar
-                android:id="@+id/seekBar2"
+                android:id="@+id/leftOrRight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

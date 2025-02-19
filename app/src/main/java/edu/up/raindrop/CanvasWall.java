@@ -1,5 +1,7 @@
 package edu.up.raindrop;
 
+import static java.lang.Math.sqrt;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
@@ -21,6 +23,7 @@ public class CanvasWall extends SurfaceView
 {
     Random rng = new Random();
     int dotDraw = rng.nextInt(6,13);
+    private int mainIndex = rng.nextInt(dotDraw);
     private final Drop[] drops = new Drop[dotDraw];
 
     public CanvasWall(Context context, AttributeSet attrs)
@@ -34,6 +37,32 @@ public class CanvasWall extends SurfaceView
             drops[i] = new Drop();
         }
 
+    }
+    public void mainXCoord(int x)
+    {
+        drops[mainIndex].setXPos(x);
+        invalidate();
+    }
+
+    public void mainYCoord(int y)
+    {
+        drops[mainIndex].setYPos(y);
+        invalidate();
+    }
+
+    public void merge()
+    {
+        for(int i = 0; i < drops.length; i++)
+        {
+            if(i != mainIndex)
+            {
+                if(Math.abs(drops[mainIndex].x-drops[i].x) < 30 && Math.abs(drops[mainIndex].y-drops[i].y) < 30)
+                {
+                    drops[i].setInvisible();
+                    drops[mainIndex].size += 1;
+                }
+            }
+        }
     }
 
     @Override

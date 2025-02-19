@@ -1,5 +1,7 @@
 package edu.up.raindrop;
 
+import static java.lang.Math.sqrt;
+
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -25,6 +27,7 @@ public class Drop
     protected Paint paintBucket;
     protected Random rng = new Random();
 
+
     //gives the raindrops a random color
     protected void setDropRandomColor()
     {
@@ -46,6 +49,7 @@ public class Drop
         setDropRandomColor();
     }
 
+    /*
     //Constructor that draws a Drop at a specified location
     public Drop(int posX, int posY)
     {
@@ -55,12 +59,37 @@ public class Drop
         //calls random color method
         setDropRandomColor();
     }
+    */
+
+    public void setXPos(int newX)
+    {
+        x = newX;
+    }
+
+    public void setYPos(int newY)
+    {
+        y = newY;
+    }
+
+    public void setInvisible()
+    {
+        paintBucket.setColor(Color.argb(0,0,0,0));
+    }
+
+    public void blendColor(Drop drop)
+    {
+        int red = (drop.getRed())
+        int blue = (drop)
+        int green =
+    }
 
     //draws the Drop on the Canvas
     public void draw(Canvas wall)
     {
         wall.drawCircle(x, y, size, paintBucket);
     }
+
+
 
 
 
